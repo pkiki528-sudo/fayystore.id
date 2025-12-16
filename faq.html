@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ - FAYYSTORE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+
+  <main class="wrap">
+    <section class="card faq-card">
+      <h1 class="title">Pertanyaan yang Sering Diajukan</h1>
+      <p class="sub">Temukan jawaban untuk pertanyaan umum seputar FAYYSTORE</p>
+
+      <h2 class="faq-section">Tentang FAYYSTORE</h2>
+
+      <button class="faq-item">
+        <span>Apa itu FAYYSTORE?</span><span class="chev">▾</span>
+      </button>
+      <div class="faq-answer">
+        <p><b>FAYYSTORE</b> adalah penyedia produk digital premium dengan proses cepat, aman, dan support responsif.</p>
+      </div>
+
+      <button class="faq-item">
+        <span>Apa tagline resmi FAYYSTORE?</span><span class="chev">▾</span>
+      </button>
+      <div class="faq-answer">
+        <p>✨ Solusi Produk Digital Terbaik ✨</p>
+      </div>
+
+      <button class="faq-item">
+        <span>Apakah FAYYSTORE aman dan terpercaya?</span><span class="chev">▾</span>
+      </button>
+      <div class="faq-answer">
+        <p>Aman, transaksi jelas, dan ada panduan order. Jika ada kendala, admin siap bantu sesuai ketentuan produk.</p>
+      </div>
+
+      <button class="faq-item">
+        <span>Kenapa harus beli produk di FAYYSTORE?</span><span class="chev">▾</span>
+      </button>
+      <div class="faq-answer">
+        <p>Harga terjangkau, proses cepat, layanan 24/7 (untuk bot/webstore), dan panduan lengkap.</p>
+      </div>
+
+      <h2 class="faq-section">Reseller</h2>
+
+      <button class="faq-item">
+        <span>Apa keuntungan bergabung jadi reseller?</span><span class="chev">▾</span>
+      </button>
+      <div class="faq-answer">
+        <p>Dapat harga khusus, dan support untuk kebutuhan jualan.</p>
+      </div>
+
+      <button class="faq-item">
+        <span>Apakah ada harga khusus untuk reseller?</span><span class="chev">▾</span>
+      </button>
+      <div class="faq-answer">
+        <p>Ya, ada. Hubungi admin untuk daftar & info price list reseller.</p>
+      </div>
+
+      <a class="back-main" href="index.html">← Kembali ke Menu Utama</a>
+    </section>
+  </main>
+
+  <script>
+    const items = document.querySelectorAll(".faq-item");
+    items.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const ans = btn.nextElementSibling;
+
+        // optional: biar yang kebuka cuma satu
+        items.forEach(b => {
+          if (b !== btn) {
+            b.classList.remove("active");
+            b.nextElementSibling.style.maxHeight = null;
+          }
+        });
+
+        btn.classList.toggle("active");
+        if (btn.classList.contains("active")) {
+          ans.style.maxHeight = ans.scrollHeight + "px";
+        } else {
+          ans.style.maxHeight = null;
+        }
+      });
+    });
+  </script>
+  <script src="data.js" type="text/javascript"></script>
+</body>
+</html>

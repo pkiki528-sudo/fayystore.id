@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ketentuan Garansi - FAYYSTORE</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- background blur -->
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+
+    <main class="wrap">
+        <section class="card warranty-card">
+            <h1 class="title">Syarat & Ketentuan di FAYYSTORE</h1>
+            <p class="sub">Pilih produk untuk melihat detail ketentuan dan garansi yang berlaku.</p>
+
+            <div class="warranty-top">
+                <div class="select-wrap">
+                    <label for="produk" class="label">Pilih Produk</label>
+                    <select id="produk" class="select">
+                        <option value="">-- Silakan Pilih Produk --</option>
+                        <option value="Canva Pro">Canva Pro</option>
+                        <option value="CapCut Pro">CapCut Pro</option>
+                        <option value="ChatGPT pro">ChatGPT pro</option>
+                        <option value="Netflix">Netflix</option>
+                        <option value="vidio">vidio</option>
+                           <option value="APK LAIN SOON">APK LAIN MENUYUSUL</option>
+                        
+                    </select>
+                </div>
+
+                <a class="btn-back" href="index.html">← back</a>
+            </div>
+
+            <div id="detail" class="detail">
+                <p class="muted">Silakan pilih produk untuk menampilkan ketentuan garansi.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const data = {
+            "Canva Pro": `
+        <h3>Canva Pro</h3>
+        <ul>
+          <li>Paket: member dan family head</li>
+          <li>Masa aktif 1 bulan sejak diterima.</li>
+          <li>Maksimal digunakan di 2 device.</li>
+          <li>Akun bersifat private, dan bisa undang 100 pengguna (FAMILY HEAD).</li>
+          <li>Tidak ada refund setelah aktivasi berhasil.</li>
+          <li>Wajib kirim bukti (screenshot) saat klaim.</li>
+    
+    <h3>Ketentuan Garansi Canva Pro</h3>
+        <li>Garansi 1 bulan (hanya berlaku untuk kendala backfree.</li>
+        <li>Garansi dihitung sejak tanggal pembelian.</li>
+        <li>Garansi tidak berlaku apabila akun mengalami banned / suspend.</li>
+      `,
+
+            "CapCut Pro": `
+        <h3>CapCut Pro</h3>
+        <ul>
+          <li>pro teams.</li>
+          <li>Masa aktif: 7/14/30/35/150 Hari.</li>
+          <li>Aktivasi dilakukan melalui website dan aplikasi resmi.</li>
+          <li>Tidak ada refund setelah aktivasi berhasil.</li>
+          <li>Wajib kirim bukti (screenshot) saat klaim.</li>
+          <li>Akun bersifat private, dan boleh dibagikan ke pihak lain.</li>
+
+          <h3>Ketentuan Garansi CapCut Pro</h3>
+          <li>Dilarang mengganti email & password untuk paket 30 Hari.</li>
+          <li>Garansi 7 hari (hanya berlaku untuk kendala backfree).</li>
+          <li>Garansi dihitung sejak tanggal pembelian.</li>
+          <li>Garansi tidak berlaku apabila akun mengalami banned / suspend.</li>
+          <li>Telat claim GARANSI tidak akan di GARANSIKAN!.</li>
+        
+      `,
+            "ChatGPT pro": `
+        <h3>ChatGPT pro</h3>
+        <ul>
+          <li>Paket:busines Head , pro dan plus.</li>
+          <li>Dilarang ubah profil utama / email / password (jika sharing).</li>
+          <li>Aktivasi dilakukan melalui website dan aplikasi resmi.</li>
+          <li>Maksimal digunakan di 1 perangkat.</li>
+          <li>Tidak ada refund setelah aktivasi berhasil.</li>  
+
+          <h3>Ketentuan Garansi ChatGPT pro</h3>
+        <li>GARANSI UNTUK CHATGPT HEAD 30 HARI
+        <li>Garansi hanya berlaku untuk kendala backfree.</li>
+        <li>garansi hanya untuk 1x replace akun.</li>
+        <li>Garansi dihitung sejak tanggal pembelian.</li>
+        <li>NO GARANSI UNTUK (CHATGPT PLUS).</li>        
+
+      `,
+            "Netflix": `
+        <h3>Netflix</h3>
+        <ul>
+          <li>Produk berupa: NETFLIX PREMIUM ACCOUNT SHARING.</li>
+          <li>Paket Sharing : 1P1U/1P2U/SEMIPRIVAT.</li>
+          <li>1P1U : 1 PROFIL 1 USER MAX LOGIN 1 DEVICE.</li>
+          <li>1P2U : 1 PROFIL 2 USER MAX LOGIN 1 DEVICE.</li>
+          <LI>SEMIPRIVAT : 1 PROFIL 1 USER MAX LOGIN 2 DEVICE.</li>
+          <li>Paket Private : PRIVATE 5 PROFIL.</li>
+          <li>paket privat maksimal digunakan di 5 perangkat.</li>
+          <li>Tidak ada refund setelah aktivasi berhasil.</li>
+          <li>wajib send ss login ke admin telegram atau whatsapp.</li>
+          
+          <h3>Ketentuan Garansi Netflix</h3>
+          <li> dilarang mengotak atik akun dan mengganti email & password untuk sharing.</li>
+          <li>boleh mengganti pasword untuk paket privat.</li>
+          <li>Garansi dihitung sejak tanggal pembelian.</li>
+
+        
+      `
+        };
+
+
+        const select = document.getElementById("produk");
+        const detail = document.getElementById("detail");
+
+        select.addEventListener("change", () => {
+            const val = select.value;
+            if (!val) {
+                detail.innerHTML = `<p class="muted">Silakan pilih produk untuk menampilkan ketentuan garansi .</p>`;
+                return;
+            }
+            detail.innerHTML = data[val] || `<p class="muted">Ketentuan untuk produk ini belum diisi.</p>`;
+        });
+    </script>
+    <script src="data.js" type="text/javascript"></script>
+</body>
+</html>
