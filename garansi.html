@@ -1,205 +1,163 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ketentuan Garansi - FAYYSTORE</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ketentuan Garansi - FAYYSTORE</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <!-- background blur -->
-    <div class="blob b1"></div>
-    <div class="blob b2"></div>
-    <div class="blob b3"></div>
+  <!-- background blur blobs (samakan dengan halaman lain) -->
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
 
-    <main class="wrap">
-        <section class="card warranty-card">
-            <h1 class="title">Syarat & Ketentuan di FAYYSTORE</h1>
-            <p class="sub">Pilih produk untuk melihat detail ketentuan dan garansi yang berlaku.</p>
-            <div class="warranty-top">
-                <div class="select-wrap">
-                    <label for="produk" class="label">Pilih Produk</label>
-                    <select id="produk" class="select">
-                        <option value="">-- Silakan Pilih Produk --</option>
-                        <option value="Canva Pro">Canva Pro</option>
-                         <option value="Canva Lifetime">Canva lifetime</option>
-                        <option value="CapCut Pro">CapCut Pro</option>
-                        <option value="ChatGPT pro">ChatGPT pro</option>
-                        <option value="Netflix">Netflix</option>
-                        <option value="vidio">vidio</option>
-                        <option value="Viu">VIU</option>
-                        <option value="SPOTIFY PREMIUM">SPOTIFY</option>
-                        <option value="Zoom pro">Zoom pro</option>
-                    </select>
-                </div>
-                <a class="btn-back" href="index.html">← back</a>
-            </div>
-            <div id="detail" class="detail">
-                <p class="muted">Silakan pilih produk untuk menampilkan ketentuan garansi.</p>
-            </div>
-        </section>
-    </main>
-   <script>
-  const data = {
-    "Canva Pro": {
-      deskripsi: [
-        "Paket: member dan family head",
-        "Masa aktif 1 bulan sejak diterima",
-        "Maksimal digunakan di 2 device",
-        "Akun private, bisa undang 100 pengguna (FAMILY HEAD)",
-        "Tidak ada refund setelah aktivasi berhasil",
-        "Wajib kirim bukti (screenshot) saat klaim"
-      ],
-      garansi: [
-        "Garansi 1 bulan (hanya berlaku untuk kendala backfree)",
-        "Garansi dihitung sejak tanggal pembelian",
-        "Garansi tidak berlaku apabila akun mengalami banned / suspend"
-      ]
-    },
+  <main class="wrap">
+    <section class="card warranty-card">
+      <h1 class="title">Syarat &amp; Ketentuan di FAYYSTORE</h1>
+      <p class="sub">Pilih produk untuk melihat detail ketentuan dan garansi yang berlaku.</p>
 
-    "Canva Lifetime": {
-        deskripsi: [
-            "Produk berupa: Canva",
-            "Paket: EDU MEMBER dan FAMILY HEAD",
-            "Masa aktif: Lifetime (selamanya)",
-            "Aktivasi dilakukan melalui website dan aplikasi resmi",
-            "Maksimal digunakan di 2 perangkat",
-            "Akun bersifat private, dan bisa undang 500 pengguna (FAMILY HEAD)",
-            "Tidak ada refund setelah aktivasi berhasil",
-        ],
-        garansi: [
-            "Garansi 1 bulan (hanya berlaku untuk Head Edu)",
-            "Garansi 3 bulan (hanya berlaku untuk Member)",
-            "Garansi dihitung sejak tanggal pembelian",
-            "Garansi tidak berlaku apabila akun mengalami banned / suspend",
-        ]
-    },
+      <div class="warranty-top">
+        <div class="select-wrap">
+          <label for="produk" class="label">Pilih Produk</label>
 
-    "CapCut Pro": {
-      deskripsi: [
-        "Pro teams",
-        "Masa aktif: 7/14/30/35/150 hari",
-        "Aktivasi dilakukan melalui website dan aplikasi resmi",
-        "Tidak ada refund setelah aktivasi berhasil",
-        "Wajib kirim bukti (screenshot) saat klaim"
-      ],
-      garansi: [
-        "Garansi 7 hari (hanya berlaku untuk kendala backfree)",
-        "Garansi dihitung sejak tanggal pembelian",
-        "Garansi tidak berlaku apabila akun mengalami banned / suspend",
-        "Telat claim garansi tidak akan di garansikan"
-      ]
-    },
+          <!-- IMPORTANT: option produk akan diisi otomatis dari Sheet -->
+          <select id="produk" class="select" disabled>
+            <option value="">Memuat produk...</option>
+          </select>
+        </div>
 
-    "ChatGPT pro": {
-      deskripsi: [
-        "Paket: business head, pro dan plus",
-        "Aktivasi dilakukan melalui website dan aplikasi resmi",
-        "Maksimal digunakan di 1 perangkat",
-        "Tidak ada refund setelah aktivasi berhasil"
-      ],
-      garansi: [
-        "Garansi hanya berlaku untuk kendala backfree",
-        "Garansi hanya untuk 1x replace akun",
-        "Garansi dihitung sejak tanggal pembelian",
-        "NO GARANSI untuk (CHATGPT PLUS)"
-      ]
-    },
+        <a class="btn-back" href="index.html">← back</a>
+      </div>
 
-    "Netflix": {
-      deskripsi: [
-        "Netflix premium account sharing",
-        "Tidak Boleh mengganti password untuk paket private",
-        "Tidak ada refund setelah aktivasi berhasil"
-      ],
-      garansi: [
-        "Garansi dihitung sejak tanggal pembelian",
-        "Tidak berlaku jika akun di-ban / suspend"
-      ]
-    },
+      <div id="detail" class="detail">
+        <p class="muted">Silakan pilih produk untuk menampilkan ketentuan garansi.</p>
+      </div>
+    </section>
+  </main>
 
-    "Viu": {
-      deskripsi: [
-        "Produk berupa : Viu",
-        "Paket: Premium",
-        "Masa aktif: 1 tahun",
-        "Maksimal digunakan di 3 perangkat.",
-        "Akun bersifat private, dan boleh dibagikan ke pihak lain.",
-        "Tidak ada refund setelah aktivasi berhasil.",
-      ],
-      garansi: [
-        "Garansi dihitung sejak tanggal pembelian",
-        "Tidak berlaku jika akun di-ban / suspend",
-        "Garansi 1 bulan (hanya berlaku untuk kendala backfree)",
-      ]
-    },
+  <script>
+    // =========================
+    // 1) GANTI URL DI SINI
+    // =========================
+    const SHEET_API_URL = "https://script.google.com/macros/s/AKfycbz6zGN9ZNLCt8Fdmet2C19KRcaiT5x3jvki6z-OdY4T83ucmjEWFgBHhadD0dlB-MUW5Q/exec";
 
-    "SPOTIFY PREMIUM": {
-        deskripsi: [
-        "Produk berupa : spotify",
-        "Paket premium",
-        "Masa aktif = 1 bulan",
-        "Aktivasi dilakukan melalui website dan aplikasi resmi",
-        "Maksimal digunakan di 1 perangkat.",
-        "Akun bersifat private, dan tidak dibagikan ke pihak lain.",
-        "Tidak ada refund setelah aktivasi berhasil.",
-    ],
-         garansi: [
-        "Garansi (hanya berlaku sampai PERTAMA KALI LOGIN)",
-        "Garansi tidak termasuk apabila akun mengalami banned / suspend",
-        "Maksimal digunakan di 1 perangkat",
-        "Akun bersifat private, dan tidak dibagikan ke pihak lain.",
-        "Tidak ada refund setelah aktivasi berhasil."
-    ],
-  },
+    // Ambil elemen
+    const selectEl = document.getElementById("produk");
+    const detailEl = document.getElementById("detail");
 
-    "Zoom pro": {
-        deskripsi: [
-        "produk berupa : zoom pro",
-        "Paket: PRO 100 PESERTA",
-        "Masa aktif = 7 dan 14 hari",
-        "Aktivasi dilakukan melalui website dan aplikasi resmi",
-        ""
-    ],
-        garansi: [
-            "Garansi 7 hari (hanya berlaku untuk kendala backfree)",
-            "Garansi dihitung sejak tanggal pembelian",
-            "Garansi tidak berlaku apabila akun mengalami banned / suspend",
-        ],
-    }
-    
+    let data = {}; // format: { "Canva Pro": { deskripsi:[], garansi:[] }, ... }
 
-    
-
-    
-  };
-
-  const select = document.getElementById("produk");
-  const detail = document.getElementById("detail");
-
-  function render(val) {
-    if (!val || !data[val]) {
-      detail.innerHTML = `<p class="muted">Silakan pilih produk untuk menampilkan ketentuan garansi.</p>`;
-      return;
+    function escapeHtml(str) {
+      return String(str)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
     }
 
-    const { deskripsi = [], garansi = [] } = data[val];
+    function setLoading(isLoading, msg = "Memuat data garansi...") {
+      if (isLoading) {
+        selectEl.disabled = true;
+        detailEl.innerHTML = `<p class="muted">${escapeHtml(msg)}</p>`;
+      } else {
+        selectEl.disabled = false;
+      }
+    }
 
-    detail.innerHTML = `
-      <h3>${val}</h3>
-      <ul>${deskripsi.map(x => `<li>${x}</li>`).join("")}</ul>
+    function render(val) {
+      if (!val || !data[val]) {
+        detailEl.innerHTML =
+          `<p class="muted">Silakan pilih produk untuk menampilkan ketentuan garansi.</p>`;
+        return;
+      }
 
-      <h3>Ketentuan Garansi</h3>
-      <ul>${garansi.map(x => `<li>${x}</li>`).join("")}</ul>
-    `;
-  }
+      const item = data[val] || {};
+      const deskripsi = Array.isArray(item.deskripsi) ? item.deskripsi : [];
+      const garansi = Array.isArray(item.garansi) ? item.garansi : [];
 
-  select.addEventListener("change", () => render(select.value));
-  render(select.value); // biar kalau sudah kepilih, langsung muncul
-</script>
+      detailEl.innerHTML = `
+        <h3>${escapeHtml(val)}</h3>
 
+        <h3>Deskripsi</h3>
+        ${deskripsi.length
+          ? `<ul>${deskripsi.map(x => `<li>${escapeHtml(x)}</li>`).join("")}</ul>`
+          : `<p class="muted">Tidak ada deskripsi.</p>`}
+
+        <h3>Ketentuan Garansi</h3>
+        ${garansi.length
+          ? `<ul>${garansi.map(x => `<li>${escapeHtml(x)}</li>`).join("")}</ul>`
+          : `<p class="muted">Tidak ada ketentuan garansi.</p>`}
+      `;
+    }
+
+    function fillSelect() {
+      selectEl.innerHTML = `<option value="">-- Silakan Pilih Produk --</option>`;
+
+      Object.keys(data)
+        .sort((a, b) => a.localeCompare(b))
+        .forEach((name) => {
+          const opt = document.createElement("option");
+          opt.value = name;
+          opt.textContent = name;
+          selectEl.appendChild(opt);
+        });
+    }
+
+    async function loadFromSheet() {
+      setLoading(true);
+
+      try {
+        const res = await fetch(SHEET_API_URL, { cache: "no-store" });
+        const text = await res.text();
+
+        // Kadang Apps Script ngasih HTML error → biar gampang kebaca
+        // Kalau bukan JSON, JSON.parse akan gagal dan masuk catch
+        const json = JSON.parse(text);
+
+        // Kalau script kamu ngembaliin {error: "..."}:
+        if (json && json.error) {
+          detailEl.innerHTML = `<p class="muted">${escapeHtml(json.error)}</p>`;
+          selectEl.innerHTML = `<option value="">-- Gagal memuat produk --</option>`;
+          return;
+        }
+
+        data = json || {};
+
+        fillSelect();
+        setLoading(false);
+
+        // Auto render jika sebelumnya ada pilihan tersimpan (optional)
+        render(selectEl.value);
+      } catch (err) {
+        console.error("GARANSI LOAD ERROR:", err);
+        selectEl.disabled = true;
+        selectEl.innerHTML = `<option value="">-- Error memuat produk --</option>`;
+        detailEl.innerHTML =
+          `<p class="muted">Gagal memuat data. Pastikan URL /exec benar & akses Web App = "Siapa saja".</p>`;
+      }
+    }
+
+    // Event
+    selectEl.addEventListener("change", () => {
+      render(selectEl.value);
+    });
+
+    // Jalankan setelah DOM siap
+    window.addEventListener("DOMContentLoaded", () => {
+      // Validasi URL supaya gak bingung kalau lupa paste
+      if (!SHEET_API_URL || SHEET_API_URL.includes("PASTE_URL")) {
+        selectEl.disabled = true;
+        selectEl.innerHTML = `<option value="">-- Tempel URL /exec dulu --</option>`;
+        detailEl.innerHTML =
+          `<p class="muted">Belum ada URL API. Edit <code>SHEET_API_URL</code> lalu paste URL Web App (/exec).</p>`;
+        return;
+      }
+
+      loadFromSheet();
+    });
+  </script>
 </body>
-
 </html>
