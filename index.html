@@ -3,175 +3,112 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Senn store - apk premium</title>
+    <title>Senn store - Premium Digital Products</title>
+    <!-- Font Poppins dari Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Ikon Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Background blur bubbles -->
-    <div class="blob b1"></div>
-    <div class="blob b2"></div>
-    <div class="blob b3"></div>
+    <div class="background-glow"></div>
 
-    <main class="wrap">
-        <section class="card home landscape">
-            <div class="land">
-                <div class="col left">
-                    <div class="hero"></div>
-                    <div class="logo glow">
-                        <span>F</span>
-                    </div>
-
-                    <h1 class="title">senn store</h1>
-                    <p class="sub">Produk Digital Premium • Cepat • Aman • Bergaransi</p>
-
-                    <div class="trust">
-                        <span class="pill">🛡️ Garansi jelas</span>
-                        <span class="pill">⚡ Aktivasi cepat</span>
-                        <span class="pill">💬 Support responsif</span>
-                    </div>
-
-                    <div class="quick">
-                        <a class="btn primary" href="order.html">🛒 Order Sekarang</a>
-                        <a class="btn ghost" target="_blank" rel="noopener"
-                           href="https://wa.me/628551176805?text=Halo%20Admin%20Fayystore%2C%20saya%20mau%20order">WhatsApp</a>
-                    </div>
-                </div>
-
-                <div class="links">
-                    <a class="link primary" href="order.html">
-                        <span class="left">🛒</span>
-                        <span class="text">Order Sekarang (24/7)</span>
-                        <span class="right">→</span>
-                    </a>
-
-                    <a class="link" target="_blank" rel="noopener"
-                       href="https://wa.me/628551176805?text=Halo%20Admin%20Fayystore%2C%20saya%20mau%20order">
-                        <span class="left">💬</span>
-                        <span class="text">WhatsApp</span>
-                        <span class="right">→</span>
-                    </a>
-
-                    <a class="link" target="_blank" rel="noopener" href="https://t.me/ICsenn">
-                        <span class="left">📲</span>
-                        <span class="text">Telegram</span>
-                        <span class="right">→</span>
-                    </a>
-
-                    <a class="link" target="_blank" rel="noopener" href="https://fayystore.my.id/mailbox">
-                        <span class="left">✉️</span>
-                        <span class="text">akses email</span>
-                        <span class="right">→</span>
-                    </a>
-
-                    <a class="link" href="garansi.html">
-                        <span class="left">🛡️</span>
-                        <span class="text">Ketentuan Garansi</span>
-                        <span class="right">→</span>
-                    </a>
-
-                    <a class="link" href="faq.html">
-                        <span class="left">❓</span>
-                        <span class="text">FAQ</span>
-                        <span class="right">→</span>
-                    </a>
-
-                    <a class="link" href="reseller.html">
-                        <span class="left">💬</span>
-                        <span class="text">daftar reseller</span>
-                        <span class="right">→</span>
-                    </a>
-                </div>
+    <main class="container">
+        <!-- Header Profile -->
+        <header class="profile">
+            <div class="avatar">
+                <i class='bx bx-store'></i>
             </div>
-
-            <!-- PRODUK FAVORIT -->
-            <div class="featured">
-                <h2 class="section-title">🔥 Produk Favorit</h2>
-
-                <div class="product-grid">
-                    <div class="product-card">
-                        <div class="p-icon">🎨</div>
-                        <h3>Canva Pro</h3>
-                        <p>1 Bulan • Private</p>
-                        <span class="badge">Garansi</span>
-                        <a href="order.html" class="p-btn">Order</a>
-                    </div>
-
-                    <div class="product-card highlight">
-                        <div class="p-icon">🤖</div>
-                        <h3>ChatGPT</h3>
-                        <p>Aktif Cepat</p>
-                        <span class="badge">Best Seller</span>
-                        <a href="order.html" class="p-btn">Order</a>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="p-icon">🎬</div>
-                        <h3>Netflix Premium</h3>
-                        <p>Sharing Aman</p>
-                        <span class="badge">Ready</span>
-                        <a href="order.html" class="p-btn">Order</a>
-                    </div>
-                </div>
+            <h1 class="title">SENN STORE</h1>
+            <p class="subtitle">Solusi Produk Digital Premium & Bergaransi</p>
+            
+            <div class="badges">
+                <span><i class='bx bx-check-shield'></i> Aman</span>
+                <span><i class='bx bx-timer'></i> Cepat</span>
+                <span><i class='bx bx-support'></i> 24/7 Support</span>
             </div>
+        </header>
 
-            <!-- TESTIMONI -->
-            <div class="testi">
-                <div class="testi-head">
-                    <h2 class="section-title">⭐ Testimoni Customer</h2>
-                    <span class="mini-note">Real chat • Fast respon</span>
+        <!-- Tombol Order Utama -->
+        <a href="order.html" class="btn-main pulse-effect">
+            <i class='bx bx-cart-add'></i> Order Sekarang (Otomatis)
+        </a>
+
+        <!-- Link Navigasi -->
+        <section class="links-group">
+            <a href="https://wa.me/628551176805?text=Halo%20Admin%20Senn%20Store" target="_blank" class="link-card whatsapp">
+                <div class="link-info">
+                    <i class='bx bxl-whatsapp'></i>
+                    <span>WhatsApp Admin</span>
                 </div>
+                <i class='bx bx-chevron-right arrow'></i>
+            </a>
 
-                <div class="testi-grid">
-                    <div class="t-card">
-                        <div class="t-top">
-                            <span class="t-stars">⭐⭐⭐⭐⭐</span>
-                            <span class="t-tag">Canva Pro</span>
-                        </div>
-                        <p class="t-text">“Fast banget, langsung aktif. Admin ramah & jelas.”</p>
-                        <div class="t-user">
-                            <span class="t-ava">A</span>
-                            <div>
-                                <b>Andi</b>
-                                <span class="t-sub">via WhatsApp</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="t-card highlight">
-                        <div class="t-top">
-                            <span class="t-stars">⭐⭐⭐⭐⭐</span>
-                            <span class="t-tag">ChatGPT Pro</span>
-                        </div>
-                        <p class="t-text">“Bot jalan 24/7, proses rapi. Recommended!”</p>
-                        <div class="t-user">
-                            <span class="t-ava">R</span>
-                            <div>
-                                <b>Rina</b>
-                                <span class="t-sub">via Telegram</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- BAGIAN HTML YANG TERPOTONG DIPERBAIKI DI SINI -->
-                    <div class="t-card">
-                        <div class="t-top">
-                            <span class="t-stars">⭐⭐⭐⭐⭐</span>
-                            <span class="t-tag">Netflix</span>
-                        </div>
-                        <p class="t-text">“Akun aman, instruksi jelas. Next order lagi.”</p>
-                        <div class="t-user">
-                            <span class="t-ava">D</span>
-                            <div>
-                                <b>Dimas</b>
-                                <span class="t-sub">via WhatsApp</span>
-                            </div>
-                        </div>
-                    </div>
+            <a href="https://t.me/ICsenn" target="_blank" class="link-card telegram">
+                <div class="link-info">
+                    <i class='bx bxl-telegram'></i>
+                    <span>Telegram Admin</span>
                 </div>
-                
-                <p class="footer small">© Senn store • Solusi Produk Digital Terbaik</p>
+                <i class='bx bx-chevron-right arrow'></i>
+            </a>
+
+            <a href="garansi.html" class="link-card">
+                <div class="link-info">
+                    <i class='bx bx-shield-quarter'></i>
+                    <span>Ketentuan Garansi</span>
+                </div>
+                <i class='bx bx-chevron-right arrow'></i>
+            </a>
+
+            <a href="faq.html" class="link-card">
+                <div class="link-info">
+                    <i class='bx bx-message-rounded-dots'></i>
+                    <span>Tanya Jawab (FAQ)</span>
+                </div>
+                <i class='bx bx-chevron-right arrow'></i>
+            </a>
+            
+            <a href="reseller.html" class="link-card">
+                <div class="link-info">
+                    <i class='bx bx-group'></i>
+                    <span>Daftar Reseller</span>
+                </div>
+                <i class='bx bx-chevron-right arrow'></i>
+            </a>
+        </section>
+
+        <!-- Etalase Produk -->
+        <section class="products">
+            <h2 class="section-title"><i class='bx bxs-hot'></i> Produk Terlaris</h2>
+            <div class="product-grid">
+                <!-- Card 1 -->
+                <div class="product-card">
+                    <div class="p-icon canva"><i class='bx bxl-kickstarter'></i></div>
+                    <h3>Canva Pro</h3>
+                    <p>1 Bulan Private</p>
+                    <a href="order.html" class="p-btn">Beli</a>
+                </div>
+                <!-- Card 2 -->
+                <div class="product-card best-seller">
+                    <div class="best-badge">Best</div>
+                    <div class="p-icon chatgpt"><i class='bx bx-bot'></i></div>
+                    <h3>ChatGPT Plus</h3>
+                    <p>Aktif Cepat</p>
+                    <a href="order.html" class="p-btn">Beli</a>
+                </div>
+                <!-- Card 3 -->
+                <div class="product-card">
+                    <div class="p-icon netflix"><i class='bx bx-movie-play'></i></div>
+                    <h3>Netflix</h3>
+                    <p>Sharing Premium</p>
+                    <a href="order.html" class="p-btn">Beli</a>
+                </div>
             </div>
         </section>
+
+        <footer class="footer">
+            <p>© 2026 Senn Store. All rights reserved.</p>
+        </footer>
     </main>
 </body>
 </html>
